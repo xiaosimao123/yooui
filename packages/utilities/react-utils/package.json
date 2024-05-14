@@ -18,11 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nextui-org/nextui.git",
+    "url": "git+https://github.com/simao234430/nextui.git",
     "directory": "packages/utilities/react-utils"
   },
   "bugs": {
-    "url": "https://github.com/nextui-org/nextui/issues"
+    "url": "https://github.com/simao234430/nextui/issues"
   },
   "scripts": {
     "build": "tsup src --dts",

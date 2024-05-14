@@ -1,4 +1,4 @@
-# @nextui-org/system
+# @simao234430/system
 
 A Quick description of the component
 
@@ -7,18 +7,18 @@ A Quick description of the component
 ## Installation
 
 ```sh
-yarn add @nextui-org/system
+yarn add @simao234430/system
 # or
-npm i @nextui-org/system
+npm i @simao234430/system
 ```
 
 ## Contribution
 
 Yes please! See the
-[contributing guidelines](https://github.com/nextui-org/nextui/blob/master/CONTRIBUTING.md)
+[contributing guidelines](https://github.com/simao234430/nextui/blob/master/CONTRIBUTING.md)
 for details.
 
 ## License
 
 This project is licensed under the terms of the
-[MIT license](https://github.com/nextui-org/nextui/blob/master/LICENSE).
+[MIT license](https://github.com/simao234430/nextui/blob/master/LICENSE).
