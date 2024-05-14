@@ -1,12 +1,12 @@
 {
-  "name": "@simao234430/react-utils",
-  "version": "2.0.13",
-  "description": "A set of utilities for react on client side",
+  "name": "@simao234430/button",
+  "version": "2.0.0",
+  "description": "",
   "keywords": [
-    "react-utils"
+    "button"
   ],
   "author": "Junior Garcia <jrgarciadev@gmail.com>",
-  "homepage": "https://nextui.org",
+  "homepage": "https://YooUI.org",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": false,
@@ -18,11 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simao234430/nextui.git",
-    "directory": "packages/utilities/react-utils"
+    "url": "git+https://github.com/xiaosimao123/yooui.git",
+    "directory": "packages/components/button"
   },
   "bugs": {
-    "url": "https://github.com/simao234430/nextui/issues"
+    "url": "https://github.com/xiaosimao123/yooui/issues"
   },
   "scripts": {
     "build": "tsup src --dts",
@@ -34,14 +34,21 @@
     "postpack": "clean-package restore"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@simao234430/theme": ">=2.0.0",
+    "@simao234430/system": ">=2.0.0"
   },
   "dependencies": {
-
+    "@simao234430/shared-utils": "workspace:*",
+    "@simao234430/react-utils": "workspace:*"
   },
   "devDependencies": {
+    "@simao234430/theme": "workspace:*",
+    "@simao234430/system": "workspace:*",
     "clean-package": "2.2.0",
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "clean-package": "../../../clean-package.config.json"
 }

@@ -1,9 +1,9 @@
 {
-  "name": "@simao234430/system-rsc",
+  "name": "@simao234430/system",
   "version": "2.0.0",
   "description": "",
   "keywords": [
-    "system-rsc"
+    "system"
   ],
   "author": "Junior Garcia <jrgarciadev@gmail.com>",
   "homepage": "https://YooUI.org",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xiaosimao123/yooui.git",
-    "directory": "packages/core/system-rsc"
+    "directory": "packages/core/system"
   },
   "bugs": {
     "url": "https://github.com/xiaosimao123/yooui/issues"
@@ -33,14 +33,17 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
-  "workspaces": ["../theme"],
-  "dependencies": {
-
-    "clsx": "^1.2.1"
-  },
   "devDependencies": {
     "clean-package": "2.2.0"
   },
+  "dependencies": {
+    "@react-aria/i18n": "3.10.2",
+    "@internationalized/date": "^3.5.2",
+    "@react-aria/overlays": "3.21.1",
+    "@react-aria/utils": "3.23.2",
+    "@react-stately/utils": "3.9.1"
+  },
+  "workspaces": ["../*","../../utilities/*"],
   "clean-package": "../../../clean-package.config.json",
   "tsup": {
     "clean": true,
