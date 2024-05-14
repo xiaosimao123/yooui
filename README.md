@@ -67,7 +67,7 @@ tsup src/index.tsx --format esm,cjs --dts --external react
 
 ```json:acme-core/package.json
 {
-  "name": "@acme/core",
+  "name": "@simao234430/core",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
