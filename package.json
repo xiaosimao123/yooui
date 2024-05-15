@@ -14,7 +14,6 @@
     "release": "turbo run build --filter=docs^... && changeset publish"
   },  
   "dependencies": {
-    "@simao234430/system-rsc": "workspace",
     "@babel/cli": "^7.24.5",
     "@babel/core": "^7.24.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.15.6",

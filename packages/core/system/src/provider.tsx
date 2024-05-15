@@ -9,7 +9,7 @@ import {CalendarDate} from "@internationalized/date";
 
 import {ProviderContext} from "./provider-context";
 
-export interface NextUIProviderProps
+export interface YooUIProviderProps
   extends Omit<ModalProviderProps, "children">,
     ProviderContextProps {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export interface NextUIProviderProps
   navigate?: (path: string) => void;
 }
 
-export const NextUIProvider: React.FC<NextUIProviderProps> = ({
+export const YooUIProvider: React.FC<YooUIProviderProps> = ({
   children,
   navigate,
   locale = "en-US",

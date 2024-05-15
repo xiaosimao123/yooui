@@ -1,3 +1,4 @@
+"use client"
 import {forwardRef} from "@simao234430/system";
 
 import { UseButtonProps, useButton } from "./use-button";

@@ -4,20 +4,23 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build --docs",
-    "preview-storybook": "serve storybook-static",
-    "clean": "rm -rf .turbo && rm -rf node_modules",
-    "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
  
     "@simao234430/ui": "*",
+    "next": "^13.5.6",
+    "next-contentlayer": "^0.3.4",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@storybook/addon-actions": "^7.6.17",
     "@storybook/addon-docs": "^7.6.17",
     "@storybook/addon-essentials": "^7.6.17",
@@ -28,8 +31,7 @@
     "eslint": "^8.57.0",
     "serve": "^14.2.1",
     "storybook": "^7.6.17",
-    "@repo/typescript-config": "*",
-    "typescript": "^5.3.3",
+    "typescript": "^5.4.5",
     "vite": "^5.1.4"
   }
 }

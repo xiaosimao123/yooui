@@ -40,12 +40,10 @@
     "@simao234430/system": ">=2.0.0"
   },
   "dependencies": {
-    "@simao234430/shared-utils": "workspace:*",
-    "@simao234430/react-utils": "workspace:*"
+ 
   },
   "devDependencies": {
-    "@simao234430/theme": "workspace:*",
-    "@simao234430/system": "workspace:*",
+ 
     "clean-package": "2.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

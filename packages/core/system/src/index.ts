@@ -27,8 +27,8 @@ export {
 } from "@simao234430/system-rsc";
 
 export type {SupportedCalendars} from "./types";
-export type {NextUIProviderProps} from "./provider";
+export type {YooUIProviderProps} from "./provider";
 export type {ProviderContextProps} from "./provider-context";
 
-export {NextUIProvider} from "./provider";
+export {YooUIProvider} from "./provider";
 export {ProviderContext, useProviderContext} from "./provider-context";

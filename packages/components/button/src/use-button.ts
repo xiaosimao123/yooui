@@ -15,10 +15,10 @@ interface Props extends HTMLYooUIProps<"div"> {
 
 export type UseButtonProps = Props & ButtonVariantProps;
 
-export function useButton(originalProps: UseButtonProps) {
-  const [props, variantProps] = mapPropsVariants(originalProps, button.variantKeys);
+export function useButton(props: UseButtonProps) {
+  // const [props, variantProps] = mapPropsVariants(props, button.variantKeys);
 
-  const {ref, as, className, ...otherProps} = props;
+  const {ref, as, className, color, ...otherProps} = props;
 
   const Component = as || "div";
 
@@ -27,10 +27,10 @@ export function useButton(originalProps: UseButtonProps) {
   const styles = useMemo(
   () =>
     button({
-      ...variantProps,
+      color,
       className,
     }),
-  [objectToDeps(variantProps), className],
+  [      color, className],
 );
 
   return {Component, styles, domRef, ...otherProps};
