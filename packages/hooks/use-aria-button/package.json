@@ -1,9 +1,9 @@
 {
-  "name": "@simao234430/system",
+  "name": "@simao234430/use-aria-button",
   "version": "2.0.0",
   "description": "",
   "keywords": [
-    "system"
+    "use-aria-button"
   ],
   "author": "Junior Garcia <jrgarciadev@gmail.com>",
   "homepage": "https://YooUI.org",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xiaosimao123/yooui.git",
-    "directory": "packages/core/system"
+    "directory": "packages/hooks/use-aria-button"
   },
   "bugs": {
     "url": "https://github.com/xiaosimao123/yooui/issues"
@@ -33,17 +33,12 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
-  "devDependencies": {
-    "clean-package": "2.2.0"
+  "peerDependencies": {
+    "react": ">=18"
   },
-  "dependencies": {
-    "@internationalized/date": "^3.5.2",
-    "@react-aria/i18n": "3.10.2",
-    "@react-aria/overlays": "3.21.1",
-    "@react-aria/utils": "3.23.2",
-    "@react-stately/utils": "3.9.1",
-    "@simao234430/react-utils": "file:../../utilities/react-utils/dist",
-    "@simao234430/system-rsc": "file:../system-rsc"
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
   },
   "clean-package": "../../../clean-package.config.json",
   "tsup": {

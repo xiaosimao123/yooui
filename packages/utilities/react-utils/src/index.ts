@@ -24,11 +24,11 @@ export {
 
 export {getCSSStyleVal, getRealShape} from "./dimensions";
  
-// export {
-//   DOMPropNames,
-//   DOMEventNames,
-//   getValidChildren,
-//   pickChildren,
-//   renderFn,
-//   filterDOMProps,
-// } from "@simao234430/shared-utils";
+export {
+  DOMPropNames,
+  DOMEventNames,
+  getValidChildren,
+  pickChildren,
+  renderFn,
+  filterDOMProps,
+} from "@simao234430/react-rsc-utils";

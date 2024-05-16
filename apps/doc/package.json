@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@simao234430/theme": "*",
-    "@simao234430/system": "*",
-    "@simao234430/button": "*",
+ 
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",

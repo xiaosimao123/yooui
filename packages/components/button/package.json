@@ -1,6 +1,6 @@
 {
   "name": "@simao234430/button",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "keywords": [
     "button"
@@ -34,16 +34,17 @@
     "postpack": "clean-package restore"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18",
+    "@simao234430/system": ">=2.0.0",
     "@simao234430/theme": ">=2.0.0",
-    "@simao234430/system": ">=2.0.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "dependencies": {
- 
+    "@simao234430/spinner": "file:../spinner",
+    "@simao234430/react-utils": "file:../../utlities/react-utils",
+    "@simao234430/use-aria-button": "file:../../hooks/use-aria-button"
   },
   "devDependencies": {
- 
     "clean-package": "2.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
