@@ -1,4 +1,4 @@
-import {forwardRef} from "@simao234430/system";
+import {forwardRef} from "@simao234430/system-rsc";
 
 import { UseSpinnerProps, useSpinner } from "./use-spinner";
 
@@ -17,6 +17,7 @@ const Spinner = forwardRef<"div", SpinnerProps>((props, ref) => {
     </div>
   );
 });
+
 Spinner.displayName = "YooUI.Spinner";
 
 export default Spinner;

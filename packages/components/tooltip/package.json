@@ -1,0 +1,60 @@
+{
+  "name": "@simao234430/tooltip",
+  "version": "2.0.0",
+  "description": "",
+  "keywords": [
+    "tooltip"
+  ],
+  "author": "xiaosimao <simao23430@gmail.com>",
+  "homepage": "https://YooUI.org",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaosimao123/yooui.git",
+    "directory": "packages/components/tooltip"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaosimao123/yooui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "@simao234430/system": ">=2.0.0",
+    "@simao234430/theme": ">=2.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@react-aria/interactions": "3.21.1",
+    "@react-aria/overlays": "3.21.1",
+    "@react-aria/tooltip": "3.7.2",
+    "@react-aria/utils": "3.23.2",
+    "@react-stately/tooltip": "3.4.7",
+    "@react-types/overlays": "3.8.5",
+    "@react-types/tooltip": "3.4.7",
+    "@simao234430/aria-utils": "file:../../utilities/aria-utils",
+    "@simao234430/framer-utils": "file:../../utilities/framer-utils",
+    "@simao234430/use-safe-layout-effect": "file:../../hooks/use-safe-layout-effect"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

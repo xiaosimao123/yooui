@@ -1,0 +1,51 @@
+{
+  "name": "@simao234430/link",
+  "version": "2.0.0",
+  "description": "",
+  "keywords": [
+    "link"
+  ],
+  "author": "xiaosimao <simao23430@gmail.com>",
+  "homepage": "https://YooUI.org",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaosimao123/yooui.git",
+    "directory": "packages/components/link"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaosimao123/yooui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "@simao234430/system": ">=2.0.0",
+    "@simao234430/theme": ">=2.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@simao234430/shared-icons": "file:../../utilities/shared-icons"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
