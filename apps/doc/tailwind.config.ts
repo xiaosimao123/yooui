@@ -8,10 +8,49 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
+    "./libs/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.{js,ts,jsx,tsx,mdx}",
     "../../node_modules/@simao234430/theme/dist/**/*.{js,ts,jsx,tsx}",
+
   ],
   theme: {
     extend: {
+      colors: {
+        "code-foreground": "rgb(var(--code-foreground) / <alpha-value>)",
+        "code-syntax1": "rgb(var(--code-syntax1) / <alpha-value>)",
+        "code-syntax2": "rgb(var(--code-syntax2) / <alpha-value>)",
+        "code-syntax3": "rgb(var(--code-syntax3) / <alpha-value>)",
+        "code-syntax4": "rgb(var(--code-syntax4) / <alpha-value>)",
+        "code-syntax5": "rgb(var(--code-syntax5) / <alpha-value>)",
+        "code-syntax6": "rgb(var(--code-syntax6) / <alpha-value>)",
+        "code-removed": "rgb(var(--code-removed) / <alpha-value>)",
+        "code-string": "rgb(var(--code-string) / <alpha-value>)",
+        "code-class": "rgb(var(--code-class) / <alpha-value>)",
+        "code-punctuation": "rgb(var(--code-punctuation) / <alpha-value>)",
+        "code-number": "rgb(var(--code-number) / <alpha-value>)",
+        "code-added": "rgb(var(--code-added) / <alpha-value>)",
+        "code-line-number": "rgb(var(--code-line-number) / <alpha-value>)",
+        "code-faded-line": "rgb(var(--code-faded-line) / <alpha-value>)",
+        "code-comment": "rgb(var(--code-comment) / <alpha-value>)",
+        "code-keyword": "rgb(var(--code-keyword) / <alpha-value>)",
+        "code-function": "rgb(var(--code-function) / <alpha-value>)",
+        "code-tag": "rgb(var(--code-tag) / <alpha-value>)",
+        "code-attr-name": "rgb(var(--code-attr-name) / <alpha-value>)",
+        "code-language-javascript": "rgb(var(--code-language-javascript) / <alpha-value>)",
+        "code-highlighted-word1-bg": "rgb(var(--code-highlighted-word1-bg) / <alpha-value>)",
+        "code-highlighted-word1-bg-active":
+          "rgb(var(--code-highlighted-word1-bg-active) / <alpha-value>)",
+        "code-highlighted-word1-text": "rgb(var(--code-highlighted-word1-text) / <alpha-value>)",
+        "code-highlighted-word2-bg": "rgb(var(--code-highlighted-word2-bg) / <alpha-value>)",
+        "code-highlighted-word2-bg-active":
+          "rgb(var(--code-highlighted-word2-bg-active) / <alpha-value>)",
+        "code-highlighted-word2-text": "rgb(var(--code-highlighted-word2-text) / <alpha-value>)",
+        "code-highlighted-word3-bg": "rgb(var(--code-highlighted-word3-bg) / <alpha-value>)",
+        "code-highlighted-word3-bg-active":
+          "rgb(var(--code-highlighted-word3-bg-active) / <alpha-value>)",
+        "code-highlighted-word3-text": "rgb(var(--code-highlighted-word3-text) / <alpha-value>)",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -215,6 +254,26 @@ const config: Config = {
  
     },
   },
-  plugins: [YooUI()],
+  plugins: [YooUI(
+    {
+      addCommonColors: true,
+      themes: {
+        light: {
+          colors: {
+            "code-background": "#363449",
+            strong: "#ff4ecd",
+            "code-mdx": "#ff4ecd",
+          },
+        },
+        dark: {
+          colors: {
+            strong: "#06B7DB",
+            "code-background": "#0D0B0B",
+            "code-mdx": "#06B7DB",
+          },
+        },
+      }
+    }
+  )],
 };
 export default config;

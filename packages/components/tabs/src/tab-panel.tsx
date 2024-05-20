@@ -62,6 +62,6 @@ const TabPanel = forwardRef<"div", TabPanelProps>((props, ref) => {
   );
 });
 
-TabPanel.displayName = "NextUI.TabPanel";
+TabPanel.displayName = "YooUI.TabPanel";
 
 export default TabPanel;

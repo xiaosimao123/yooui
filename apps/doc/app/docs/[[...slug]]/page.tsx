@@ -1,16 +1,17 @@
+
 import type {Metadata} from "next";
 import {siteConfig} from "@/config/site";
 import {notFound} from "next/navigation";
 import {allDocs} from "contentlayer/generated";
-// import {Link} from "@simao234430/react";
+import {Link} from "@simao234430/react";
 
 import {MDXContent} from "@/components/mdx-content";
 
-// import {DocsPager, DocsToc} from "@/components/docs";
-// import {Route} from "@/libs/docs/page";
-// import {GITHUB_URL, REPO_NAME} from "@/libs/github/constants";
-// import {CONTENT_PATH, TAG} from "@/libs/docs/config";
-// import {getHeadings} from "@/libs/docs/utils";
+import {DocsPager, DocsToc} from "@/components/docs";
+import {Route} from "@/libs/docs/page";
+import {GITHUB_URL, REPO_NAME} from "@/libs/github/constants";
+import {CONTENT_PATH, TAG} from "@/libs/docs/config";
+import {getHeadings} from "@/libs/docs/utils";
 
 interface DocPageProps {
   params: {
@@ -26,15 +27,15 @@ async function getDocFromParams({params}: DocPageProps) {
     null;
   }
 
-//   const headings = getHeadings(doc?.body.raw);
+  const headings = getHeadings(doc?.body.raw);
 
-//   const currentRoute: Route = {
-//     key: doc?._id,
-//     title: doc?.title,
-//     path: `/${doc?._raw?.sourceFilePath}`,
-//   };
-  return {doc };
-//   return {doc, headings, currentRoute};
+  const currentRoute: Route = {
+    key: doc?._id,
+    title: doc?.title,
+    path: `/${doc?._raw?.sourceFilePath}`,
+  };
+ 
+  return {doc, headings, currentRoute};
 }
 
 export async function generateMetadata({params}: DocPageProps): Promise<Metadata> {
@@ -78,12 +79,12 @@ export async function generateStaticParams(): Promise<DocPageProps["params"][]> 
 }
 
 export default async function DocPage({params}: DocPageProps) {
-//   const {doc, headings, currentRoute} = await getDocFromParams({params});
-  const {doc} = await getDocFromParams({params});
+  const {doc, headings, currentRoute} = await getDocFromParams({params});
+  // const {doc} = await getDocFromParams({params});
   if (!doc) {
     notFound();
   }
-//   const editUrl = `${GITHUB_URL}/${REPO_NAME}/edit/${TAG}${CONTENT_PATH}${currentRoute?.path}`;
+   const editUrl = `${GITHUB_URL}/${REPO_NAME}/edit/${TAG}${CONTENT_PATH}${currentRoute?.path}`;
 
   return (
     <>
@@ -92,18 +93,19 @@ export default async function DocPage({params}: DocPageProps) {
         <div className="w-full prose prose-neutral">
           <MDXContent code={doc.body.code} />
         </div>
-        {/* {currentRoute && <DocsPager currentRoute={currentRoute} />}
+        {currentRoute && <DocsPager currentRoute={currentRoute} />}
         <footer>
           <Link isExternal showAnchorIcon href={editUrl} size="sm">
             Edit this page on GitHub
           </Link>
-        </footer> */}
+        </footer>
       </div>
-      {/* {headings && headings.length > 0 && (
+      {headings && headings.length > 0 && (
         <div className="hidden z-10 xl:flex xl:col-span-2 mt-8 pl-4">
           <DocsToc headings={headings} />
+          {/* {JSON.stringify(headings)} */}
         </div>
-      )} */}
+      )}
     </>
   );
 }

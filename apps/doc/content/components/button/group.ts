@@ -1,4 +1,4 @@
-const App = `import {Button, ButtonGroup} from "@nextui-org/react";
+const App = `import {Button, ButtonGroup} from "@simao234430/react";
 
 export default function App() {
   return (

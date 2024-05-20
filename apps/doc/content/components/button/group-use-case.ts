@@ -4,7 +4,7 @@ const ChevronDownIcon = `export const ChevronDownIcon = () => (
   </svg>
 );`;
 
-const App = `import {Button, ButtonGroup, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
+const App = `import {Button, ButtonGroup, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@simao234430/react";
 import {ChevronDownIcon} from './ChevronDownIcon';
 
 export default function App() {

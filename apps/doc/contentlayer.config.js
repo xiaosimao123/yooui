@@ -65,13 +65,13 @@ const AuthorProperties = defineNestedType(() => ({
 //         return date.toLocaleDateString("en-US", options);
 //       }
 //     },
-//     // add https://nextui.org to the image path
+//     // add https://YooUI.org to the image path
 //     imageAsParams: {
 //       type: "string",
 //       resolve: (doc) => {
 //         const image = doc.image;
 //         if (image) {
-//           return `https://nextui.org${image}`;
+//           return `https://YooUI.org${image}`;
 //         }
 //       }
 //     }

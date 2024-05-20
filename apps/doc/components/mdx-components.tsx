@@ -185,10 +185,10 @@ export const MDXComponents = {
    * Next.js components
    */
   // NextImage,
-  // /**
-  //  * NextUI components
-  //  */
-  // ...Components,
+  /**
+   * NextUI components
+   */
+  ...Components,
   /**
    * Docs components
    */

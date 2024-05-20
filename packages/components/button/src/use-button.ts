@@ -32,7 +32,7 @@ interface Props extends HTMLYooUIProps<"button"> {
   endContent?: ReactNode;
   /**
    * Spinner to display when loading.
-   * @see https://nextui.org/components/spinner
+   * @see https://YooUI.org/components/spinner
    */
   spinner?: ReactNode;
   /**

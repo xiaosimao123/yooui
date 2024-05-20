@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
+import manifest from "@/config/routes.json";
+import "@/styles/globals.css";
 import { Providers } from "./providers";
 import {clsx} from "@simao234430/shared-utils";
 // import {fontSans} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+ 
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -47,9 +52,9 @@ export const metadata: Metadata = {
   ],
   creator: "jrgarciadev",
   alternates: {
-    canonical: "https://nextui.org",
+    canonical: "https://YooUI.org",
     types: {
-      "application/rss+xml": [{url: "https://nextui.org/feed.xml", title: "NextUI RSS Feed"}],
+      "application/rss+xml": [{url: "https://YooUI.org/feed.xml", title: "NextUI RSS Feed"}],
     },
   },
   viewport:
@@ -66,7 +71,9 @@ export default function RootLayout({
     <body className={clsx("min-h-screen bg-background font-sans antialiased" )}>
     <div className="relative flex flex-col" id="app-container">
       <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
-        {children}
+      <Navbar mobileRoutes={manifest.mobileRoutes} routes={manifest.routes} />
+            {children}
+            <Footer />
       </Providers>
       </div>
       </body>

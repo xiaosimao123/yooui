@@ -145,6 +145,6 @@ const Tab = forwardRef<"button", TabItemProps>((props, ref) => {
   );
 });
 
-Tab.displayName = "NextUI.Tab";
+Tab.displayName = "YooUI.Tab";
 
 export default Tab;

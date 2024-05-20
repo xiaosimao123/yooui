@@ -56,7 +56,7 @@ const CameraIcon = `export const CameraIcon = ({
   );
 };`;
 
-const App = `import {Button} from "@nextui-org/react";
+const App = `import {Button} from "@simao234430/react";
 import {HeartIcon} from './HeartIcon';
 import {CameraIcon} from './CameraIcon';
 

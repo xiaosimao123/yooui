@@ -1,0 +1,55 @@
+{
+  "name": "@simao234430/switch",
+  "version": "2.0.0",
+  "description": "",
+  "keywords": [
+    "switch"
+  ],
+  "author": "xiaosimao <simao23430@gmail.com>",
+  "homepage": "https://YooUI.org",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaosimao123/yooui.git",
+    "directory": "packages/components/switch"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaosimao123/yooui/issues"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@simao234430/theme": ">=2.0.0",
+    "@simao234430/system": ">=2.0.0"
+  },
+  "dependencies": {
+    "@react-aria/switch": "3.6.2",
+    "@react-aria/utils": "3.23.2",
+    "@react-aria/visually-hidden": "3.8.10",
+    "@react-stately/toggle": "3.7.2"
+  },
+  "devDependencies": {
+ 
+    "clean-package": "2.2.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
