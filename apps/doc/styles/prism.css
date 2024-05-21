@@ -88,7 +88,7 @@
 
 /* Styles for highlighted word */
 .code-block .highlight-word {
-  @apply inline-block text-code-highlighted-word1-bg   bg-code-highlighted-word1-bg;
+  @apply inline-block text-code-highlighted-word1-bg bg-code-highlighted-word1-bg;
 }
 
 .code-block .highlight-word .token {

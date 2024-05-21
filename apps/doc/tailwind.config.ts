@@ -1,9 +1,15 @@
-import type { Config } from "tailwindcss";
-import {YooUI} from "@simao234430/theme";
-// import {commonColors} from "@simao234430/theme";
-const {commonColors} = require("@simao234430/theme");
-// const {yooui} = require("@simao234430/theme/plugin");
-const config: Config = {
+const {YooUI} = require("@simao234430/theme/plugin");
+const {commonColors} = require("@simao234430/theme/colors");
+const svgToDataUri = require("mini-svg-data-uri");
+const plugin = require("tailwindcss/plugin");
+const {default: flattenColorPalette} = require("tailwindcss/lib/util/flattenColorPalette");
+
+// get tailwindcss default config
+const defaultTheme = require("tailwindcss/defaultTheme");
+const twColors = require("tailwindcss/colors.js");
+ 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,6 +20,7 @@ const config: Config = {
     "../../node_modules/@simao234430/theme/dist/**/*.{js,ts,jsx,tsx}",
 
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -51,10 +58,22 @@ const config: Config = {
           "rgb(var(--code-highlighted-word3-bg-active) / <alpha-value>)",
         "code-highlighted-word3-text": "rgb(var(--code-highlighted-word3-text) / <alpha-value>)",
       },
+      boxShadow: {
+        highlighted: `${commonColors.purple[500]} 1px 0 0, ${commonColors.purple[500]} -1px 0 0`,
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        serif: defaultTheme.fontFamily.serif,
+        mono: defaultTheme.fontFamily.mono,
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: "hsl(var(--nextui-foreground))",
+            color: "hsl(var(--yooui-foreground))",
             maxWidth: "none",
             hr: {
               marginTop: "2em",
@@ -129,7 +148,7 @@ const config: Config = {
               fontWeight: "inherit",
             },
             strong: {
-              color: "hsl(var(--nextui-strong))",
+              color: "hsl(var(--yooui-strong))",
               fontWeight: theme("fontWeight.semibold"),
             },
             "a strong": {
@@ -208,31 +227,31 @@ const config: Config = {
         },
         dark: {
           css: {
-            color: "hsl(var(--nextui-default-700))",
+            color: "hsl(var(--yooui-default-700))",
             strong: {
-              color: "hsl(var(--nextui-cyan-500))",
+              color: "hsl(var(--yooui-cyan-500))",
             },
           },
         },
         neutral: {
           css: {
-            "--tw-prose-body": "hsl(var(--nextui-default-700))",
-            "--tw-prose-headings": "hsl(var(--nextui-foreground))",
-            "--tw-prose-lead": "hsl(var(--nextui-default-600))",
-            "--tw-prose-links": "hsl(var(--nextui-default-900))",
-            "--tw-prose-bold": "hsl(var(--nextui-default-900))",
-            "--tw-prose-counters": "hsl(var(--nextui-default-500))",
-            "--tw-prose-bullets": "hsl(var(--nextui-default-300))",
-            "--tw-prose-hr": "hsl(var(--nextui-default-200))",
-            "--tw-prose-quotes": "hsl(var(--nextui-default-900))",
-            "--tw-prose-quote-borders": "hsl(var(--nextui-default-200))",
-            "--tw-prose-captions": "hsl(var(--nextui-default-500))",
-            "--tw-prose-code": "hsl(var(--nextui-default-900))",
-            "--tw-prose-pre-code": "hsl(var(--nextui-default-200))",
-            "--tw-prose-pre-bg": "hsl(var(--nextui-default-800))",
-            "--tw-prose-th-borders": "hsl(var(--nextui-default-300))",
-            "--tw-prose-td-borders": "hsl(var(--nextui-default-200))",
-            "--tw-prose-invert-body": "hsl(var(--nextui-default-300))",
+            "--tw-prose-body": "hsl(var(--yooui-default-700))",
+            "--tw-prose-headings": "hsl(var(--yooui-foreground))",
+            "--tw-prose-lead": "hsl(var(--yooui-default-600))",
+            "--tw-prose-links": "hsl(var(--yooui-default-900))",
+            "--tw-prose-bold": "hsl(var(--yooui-default-900))",
+            "--tw-prose-counters": "hsl(var(--yooui-default-500))",
+            "--tw-prose-bullets": "hsl(var(--yooui-default-300))",
+            "--tw-prose-hr": "hsl(var(--yooui-default-200))",
+            "--tw-prose-quotes": "hsl(var(--yooui-default-900))",
+            "--tw-prose-quote-borders": "hsl(var(--yooui-default-200))",
+            "--tw-prose-captions": "hsl(var(--yooui-default-500))",
+            "--tw-prose-code": "hsl(var(--yooui-default-900))",
+            "--tw-prose-pre-code": "hsl(var(--yooui-default-200))",
+            "--tw-prose-pre-bg": "hsl(var(--yooui-default-800))",
+            "--tw-prose-th-borders": "hsl(var(--yooui-default-300))",
+            "--tw-prose-td-borders": "hsl(var(--yooui-default-200))",
+            "--tw-prose-invert-body": "hsl(var(--yooui-default-300))",
             "--tw-prose-invert-headings": commonColors.white,
             "--tw-prose-invert-lead": theme("twColors.neutral[400]"),
             "--tw-prose-invert-links": commonColors.white,
@@ -244,14 +263,68 @@ const config: Config = {
             "--tw-prose-invert-quote-borders": theme("twColors.neutral[700]"),
             "--tw-prose-invert-captions": theme("twColors.neutral[400]"),
             "--tw-prose-invert-code": commonColors.white,
-            "--tw-prose-invert-pre-code": "hsl(var(--nextui-default-300))",
+            "--tw-prose-invert-pre-code": "hsl(var(--yooui-default-300))",
             "--tw-prose-invert-pre-bg": "rgb(0 0 0 / 50%)",
             "--tw-prose-invert-th-borders": theme("twColors.neutral[600]"),
             "--tw-prose-invert-td-borders": theme("twColors.neutral[700]"),
           },
         },
       }),
- 
+      keyframes: {
+        heartbeat: {
+          "0%": {transform: "scale(1)"},
+          "50%": {transform: "scale(1.2)"},
+          "100%": {transform: "scale(1)"},
+        },
+        levitate: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "30%": {
+            transform: "translateY(-10px)",
+          },
+          "50%": {
+            transform: "translateY(4px)",
+          },
+          "70%": {
+            transform: "translateY(-15px)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+        expand: {
+          "0%": {transform: "scale(1)"},
+          "50%": {transform: "scale(1.2)"},
+          "100%": {transform: "scale(1)"},
+        },
+        "expand-opacity": {
+          "0%": {
+            opacity: 0,
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: 1,
+            transform: "scale(1.3)",
+          },
+          "100%": {
+            opacity: 0,
+            transform: "scale(1.295)",
+          },
+        },
+        "text-gradient": {
+          to: {
+            backgroundPosition: "-200% center",
+          },
+        },
+      },
+      animation: {
+        heartbeat: "heartbeat 1s ease-in-out infinite",
+        levitate: "levitate 5s ease infinite",
+        expand: "expand 6s ease-out infinite both",
+        "expand-opacity": "expand-opacity 6s linear infinite both",
+        "text-gradient": "text-gradient 4s linear 0s infinite normal forwards running",
+      },
     },
   },
   plugins: [YooUI(
@@ -272,8 +345,44 @@ const config: Config = {
             "code-mdx": "#06B7DB",
           },
         },
-      }
-    }
-  )],
+        // only for testing purpose
+        olive: {
+          extend: "dark",
+          layout: {
+            radius: {
+              small: "2px",
+              medium: "4px",
+              large: "6px",
+            },
+            borderWidth: {
+              small: "1px",
+              medium: "1px",
+              large: "2px",
+            },
+          },
+          colors: {
+            primary: {
+              DEFAULT: "#BEF264",
+              foreground: "#000000",
+            },
+            focus: "#BEF264",
+          },
+        },
+      },
+    }),
+    require("@tailwindcss/typography"),
+    plugin(function ({matchUtilities, theme}) {
+      matchUtilities(
+        {
+          "bg-grid": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
+            )}")`,
+          }),
+        },
+        {values: flattenColorPalette(theme("backgroundColor")), type: "color"},
+      );
+    }),
+  ],
 };
-export default config;
+ 

@@ -21,7 +21,7 @@ import {lightLayout, darkLayout, defaultLayout} from "./default-layout";
 import {baseStyles} from "./utils/classes";
 import {DEFAULT_TRANSITION_DURATION} from "./utilities/transition";
 
-const DEFAULT_PREFIX = "YooUI";
+const DEFAULT_PREFIX = "yooui";
 
 const parsedColorsCache: Record<string, number[]> = {};
 

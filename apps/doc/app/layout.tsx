@@ -9,7 +9,8 @@ import {clsx} from "@simao234430/shared-utils";
 import {siteConfig} from "@/config/site";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
- 
+import {fontSans} from "@/config/fonts";
+import {ProBanner} from "@/components/pro-banner";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -68,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning dir="ltr" lang="en">
-    <body className={clsx("min-h-screen bg-background font-sans antialiased" )}>
+    {/* <body className={clsx("min-h-screen bg-background font-sans antialiased" )}>
     <div className="relative flex flex-col" id="app-container">
       <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
       <Navbar mobileRoutes={manifest.mobileRoutes} routes={manifest.routes} />
@@ -76,6 +77,19 @@ export default function RootLayout({
             <Footer />
       </Providers>
       </div>
+      </body> */}
+
+      <body className={clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+        <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
+          <div className="relative flex flex-col" id="app-container">
+          <ProBanner />
+            <Navbar mobileRoutes={manifest.mobileRoutes} routes={manifest.routes} />
+            {children}
+            <Footer />
+          </div>
+   
+        </Providers>
+     
       </body>
     </html>
   );
