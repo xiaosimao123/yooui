@@ -1,4 +1,4 @@
-const App = `import {Calendar} from "@nextui-org/react";
+const App = `import {Calendar} from "@simao234430/react";
 
 export default function App() {
   return (

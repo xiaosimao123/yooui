@@ -38,7 +38,7 @@ export const CheckIcon = `export const CheckIcon = ({
   );
 };`;
 
-const App = `import {Chip} from "@nextui-org/react";
+const App = `import {Chip} from "@simao234430/react";
 import {NotificationIcon} from "./NotificationIcon";
 import {CheckIcon} from "./CheckIcon";
 

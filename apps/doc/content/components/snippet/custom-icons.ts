@@ -37,7 +37,7 @@ export const CheckIcon = `export const CheckIcon = ({
   );
 };`;
 
-const App = `import {Snippet} from "@nextui-org/react";
+const App = `import {Snippet} from "@simao234430/react";
 import {CopyIcon} from "./CopyIcon";
 import {CheckIcon} from "./CheckIcon";
 
@@ -48,7 +48,7 @@ export default function App() {
       copyIcon={<CopyIcon />}
       checkIcon={<CheckIcon />}
     >
-      npm install @nextui-org/react
+      npm install @simao234430/react
     </Snippet>
   );
 }`;

@@ -5,13 +5,19 @@ import manifest from "@/config/routes.json";
 import "@/styles/globals.css";
 import { Providers } from "./providers";
 import {clsx} from "@simao234430/shared-utils";
-// import {fontSans} from "@/config/fonts";
+import {fontSans} from "@/config/fonts";
 import {siteConfig} from "@/config/site";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import {fontSans} from "@/config/fonts";
+import {Cmdk} from "@/components/cmdk";
 import {ProBanner} from "@/components/pro-banner";
 // const inter = Inter({ subsets: ["latin"] });
+
+// import localFont from 'next/font/local'
+// export const InterFont = localFont({
+//   src: './inter.woff2',
+//   variable: '--font-Inter',
+// });
 
 export const metadata: Metadata = {
   title: {
@@ -87,7 +93,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
-   
+          <Cmdk />
         </Providers>
      
       </body>

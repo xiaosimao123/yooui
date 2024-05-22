@@ -1,4 +1,4 @@
-const App = `import {Tabs, Tab, Card, CardBody, Switch} from "@nextui-org/react";
+const App = `import {Tabs, Tab, Card, CardBody, Switch} from "@simao234430/react";
 
 export default function App() {
   const [isVertical, setIsVertical] = React.useState(true);

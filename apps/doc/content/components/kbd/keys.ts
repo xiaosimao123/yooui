@@ -1,4 +1,4 @@
-const App = `import {Kbd} from "@nextui-org/react";
+const App = `import {Kbd} from "@simao234430/react";
 
 export default function App() {
   return (

@@ -1,4 +1,4 @@
-const App = `import {DateInput} from "@nextui-org/react";
+const App = `import {DateInput} from "@simao234430/react";
 import {CalendarDate, parseDate} from "@internationalized/date";
 
 export default function App() {

@@ -1,4 +1,4 @@
-const App = `import {RangeCalendar, Radio, RadioGroup, Button, ButtonGroup, cn} from "@nextui-org/react";
+const App = `import {RangeCalendar, Radio, RadioGroup, Button, ButtonGroup, cn} from "@simao234430/react";
 import {today, getLocalTimeZone, startOfWeek, startOfMonth} from "@internationalized/date";
 import {useLocale} from "@react-aria/i18n";
 
@@ -116,7 +116,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {RangeCalendar, Radio, RadioGroup, Button, ButtonGroup, cn} from "@nextui-org/react";
+const AppTs = `import {RangeCalendar, Radio, RadioGroup, Button, ButtonGroup, cn} from "@simao234430/react";
 import type {DateValue} from "@react-types/calendar";
 import type {RangeValue} from "@react-types/shared";
 import {today, getLocalTimeZone, startOfWeek, startOfMonth} from "@internationalized/date";

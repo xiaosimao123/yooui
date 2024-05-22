@@ -1,4 +1,4 @@
-const App = `import {Calendar} from "@nextui-org/react";
+const App = `import {Calendar} from "@simao234430/react";
 import {today, getLocalTimeZone, isWeekend} from "@internationalized/date";
 import {useLocale} from "@react-aria/i18n";
 
@@ -19,7 +19,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {Calendar} from "@nextui-org/react";
+const AppTs = `import {Calendar} from "@simao234430/react";
 import type {DateValue} from "@react-types/calendar";
 import {today, getLocalTimeZone, isWeekend} from "@internationalized/date";
 import {useLocale} from "@react-aria/i18n";

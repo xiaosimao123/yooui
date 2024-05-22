@@ -332,7 +332,7 @@ const App = `import {
   Chip,
   User,
   Pagination,
-} from "@nextui-org/react";
+} from "@simao234430/react";
 import {PlusIcon} from "./PlusIcon";
 import {VerticalDotsIcon} from "./VerticalDotsIcon";
 import {SearchIcon} from "./SearchIcon";
@@ -685,7 +685,7 @@ const AppTs = `import {
   Selection,
   ChipProps,
   SortDescriptor
-} from "@nextui-org/react";
+} from "@simao234430/react";
 import {PlusIcon} from "./PlusIcon";
 import {VerticalDotsIcon} from "./VerticalDotsIcon";
 import {ChevronDownIcon} from "./ChevronDownIcon";

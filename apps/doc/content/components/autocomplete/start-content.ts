@@ -60,7 +60,7 @@ const PetIcon = `export const PetIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {Autocomplete, AutocompleteItem} from "@nextui-org/react";
+const App = `import {Autocomplete, AutocompleteItem} from "@simao234430/react";
 import {PetIcon} from "./PetIcon";
 import {animals} from "./data";
 

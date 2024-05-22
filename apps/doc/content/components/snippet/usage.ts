@@ -1,8 +1,8 @@
-const App = `import {Snippet} from "@nextui-org/react";
+const App = `import {Snippet} from "@simao234430/react";
 
 export default function App() {
   return (
-    <Snippet>npm install @nextui-org/react</Snippet>
+    <Snippet>npm install @simao234430/react</Snippet>
   );
 }`;
 

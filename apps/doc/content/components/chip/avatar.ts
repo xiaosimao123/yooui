@@ -1,4 +1,4 @@
-const App = `import {Chip, Avatar} from "@nextui-org/react";
+const App = `import {Chip, Avatar} from "@simao234430/react";
 
 export default function App() {
   return (

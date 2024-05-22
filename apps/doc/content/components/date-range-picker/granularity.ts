@@ -1,4 +1,4 @@
-const App = `import {DateRangePicker} from "@nextui-org/react";
+const App = `import {DateRangePicker} from "@simao234430/react";
 import {parseAbsoluteToLocal} from "@internationalized/date";
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {DateRangePicker} from "@nextui-org/react";
+const AppTs = `import {DateRangePicker} from "@simao234430/react";
 import {DateValue, parseAbsoluteToLocal} from "@internationalized/date";
 import {RangeValue} from "@react-types/shared";
 

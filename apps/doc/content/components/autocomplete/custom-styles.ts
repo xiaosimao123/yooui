@@ -235,7 +235,7 @@ const SearchIcon = `export const SearchIcon = ({
   </svg>
 );`;
 
-const App = `import {Autocomplete, AutocompleteItem, Avatar, Button} from "@nextui-org/react";
+const App = `import {Autocomplete, AutocompleteItem, Avatar, Button} from "@simao234430/react";
 import {SearchIcon} from "./SearchIcon";
 import {users} from "./data";
 

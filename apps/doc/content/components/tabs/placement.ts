@@ -1,4 +1,4 @@
-const App = `import {Tabs, Tab, Card, CardBody, RadioGroup, Radio} from "@nextui-org/react";
+const App = `import {Tabs, Tab, Card, CardBody, RadioGroup, Radio} from "@simao234430/react";
 
 export default function App() {
   const [placement, setPlacement] = React.useState("top");

@@ -1,4 +1,4 @@
-const App = `import {Tabs, Tab, Input, Link, Button, Card, CardBody, CardHeader} from "@nextui-org/react";
+const App = `import {Tabs, Tab, Input, Link, Button, Card, CardBody, CardHeader} from "@simao234430/react";
 
 export default function App() {
   const [selected, setSelected] = React.useState("login");
@@ -66,7 +66,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {Tabs, Tab, Input, Link, Button, Card, CardBody, CardHeader} from "@nextui-org/react";
+const AppTs = `import {Tabs, Tab, Input, Link, Button, Card, CardBody, CardHeader} from "@simao234430/react";
 
 export default function App() {
   const [selected, setSelected] = React.useState<string | number>("login");

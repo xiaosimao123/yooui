@@ -1,4 +1,4 @@
-const App = `import {Checkbox} from "@nextui-org/react";
+const App = `import {Checkbox} from "@simao234430/react";
 
 export default function App() {
   const [isSelected, setIsSelected] = React.useState(false);

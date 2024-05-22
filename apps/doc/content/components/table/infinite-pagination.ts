@@ -1,5 +1,5 @@
-const App = `import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Pagination, Spinner, getKeyValue} from "@nextui-org/react";
-import {useInfiniteScroll} from "@nextui-org/use-infinite-scroll";
+const App = `import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Pagination, Spinner, getKeyValue} from "@simao234430/react";
+import {useInfiniteScroll} from "@simao234430/use-infinite-scroll";
 import {useAsyncList} from "@react-stately/data";
 
 export default function App() {

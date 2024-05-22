@@ -151,7 +151,7 @@ const data = `export const users = [
   },
 ];`;
 
-const App = `import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Pagination, getKeyValue} from "@nextui-org/react";
+const App = `import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Pagination, getKeyValue} from "@simao234430/react";
 import {users} from "./data";
 
 export default function App() {

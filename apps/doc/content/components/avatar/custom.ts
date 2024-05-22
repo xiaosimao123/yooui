@@ -1,4 +1,4 @@
-const App = `import {Avatar, AvatarIcon} from "@nextui-org/react";
+const App = `import {Avatar, AvatarIcon} from "@simao234430/react";
 
 export default function App() {
   return (

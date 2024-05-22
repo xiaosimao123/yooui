@@ -1,7 +1,7 @@
 const App = `import {forwardRef} from "react";
 import {useMemo} from "react";
 
-import {AvatarIcon, useAvatar} from "@nextui-org/react";
+import {AvatarIcon, useAvatar} from "@simao234430/react";
 
 const MyAvatar = forwardRef((props, ref) => {
   const {
@@ -63,7 +63,7 @@ export default MyAvatar;`;
 
 const AppTs = `import {forwardRef, useMemo} from "react";
 
-import {AvatarIcon, useAvatar, AvatarProps as BaseAvatarProps} from "@nextui-org/react";
+import {AvatarIcon, useAvatar, AvatarProps as BaseAvatarProps} from "@simao234430/react";
 
 export interface AvatarProps extends BaseAvatarProps {}
 

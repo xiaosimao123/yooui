@@ -33,7 +33,7 @@ const Content = `export const Content = ({className}) => (
   </div>
 );`;
 
-const App = `import {ScrollShadow} from "@nextui-org/react";
+const App = `import {ScrollShadow} from "@simao234430/react";
 import {Content} from "./Content";
   
 export default function App() {

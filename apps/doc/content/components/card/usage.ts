@@ -1,4 +1,4 @@
-const App = `import {Card, CardBody} from "@nextui-org/react";
+const App = `import {Card, CardBody} from "@simao234430/react";
 
 export default function App() {
   return (

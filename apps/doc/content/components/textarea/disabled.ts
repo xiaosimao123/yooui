@@ -1,4 +1,4 @@
-const App = `import {Textarea} from "@nextui-org/react";
+const App = `import {Textarea} from "@simao234430/react";
 
 export default function App() {
   return (

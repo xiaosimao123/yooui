@@ -26,7 +26,7 @@ const data = `export const animals = [
   {label: "Crocodile", value: "crocodile", description: "A large semiaquatic reptile"},
 ];`;
 
-const AppTs = `import {Autocomplete, AutocompleteItem} from "@nextui-org/react";
+const AppTs = `import {Autocomplete, AutocompleteItem} from "@simao234430/react";
 import {animals} from "./data";
 
 export default function App() {
@@ -50,7 +50,7 @@ export default function App() {
   );
 }`;
 
-const App = `import {Autocomplete, AutocompleteItem} from "@nextui-org/react";
+const App = `import {Autocomplete, AutocompleteItem} from "@simao234430/react";
 import {animals} from "./data";
 
 export default function App() {

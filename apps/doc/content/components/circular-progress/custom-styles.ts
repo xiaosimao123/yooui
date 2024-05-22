@@ -1,4 +1,4 @@
-const App = `import {CircularProgress, Card, CardBody, CardFooter, Chip} from "@nextui-org/react";
+const App = `import {CircularProgress, Card, CardBody, CardFooter, Chip} from "@simao234430/react";
 
 export default function App() {
   return (

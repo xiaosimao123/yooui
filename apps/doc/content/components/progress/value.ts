@@ -1,4 +1,4 @@
-const App = `import {Progress} from "@nextui-org/react";
+const App = `import {Progress} from "@simao234430/react";
 
 export default function App() {
   const [value, setValue] = React.useState(0);

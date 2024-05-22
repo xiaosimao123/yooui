@@ -1,4 +1,4 @@
-const App = `import {TimeInput} from "@nextui-org/react";
+const App = `import {TimeInput} from "@simao234430/react";
 
 export default function App() {
   return (

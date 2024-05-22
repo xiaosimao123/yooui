@@ -1,4 +1,4 @@
-const App = `import {Image} from "@nextui-org/react";
+const App = `import {Image} from "@simao234430/react";
 
 export default function App() {
   return (

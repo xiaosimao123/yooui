@@ -1,4 +1,4 @@
-const App = `import {TimeInput} from "@nextui-org/react";
+const App = `import {TimeInput} from "@simao234430/react";
 import {parseZonedDateTime} from "@internationalized/date";
 
 export default function App() {

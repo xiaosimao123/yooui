@@ -136,8 +136,8 @@ const usePokemonList = `export function usePokemonList({fetchDelay = 0} = {}) {
   };
 };`;
 
-const App = `import {Autocomplete, AutocompleteItem} from "@nextui-org/react";
-import {useInfiniteScroll} from "@nextui-org/use-infinite-scroll";
+const App = `import {Autocomplete, AutocompleteItem} from "@simao234430/react";
+import {useInfiniteScroll} from "@simao234430/use-infinite-scroll";
 import {usePokemonList} from "./usePokemonList";
 
 export default function App() {

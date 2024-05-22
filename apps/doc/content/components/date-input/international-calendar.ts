@@ -1,4 +1,4 @@
-const App = `import {DateInput} from "@nextui-org/react";
+const App = `import {DateInput} from "@simao234430/react";
 import {now, parseAbsoluteToLocal} from "@internationalized/date";
 import {I18nProvider} from "@react-aria/i18n";
 
@@ -14,7 +14,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {DateInput} from "@nextui-org/react";
+const AppTs = `import {DateInput} from "@simao234430/react";
 import {DateValue, now, parseAbsoluteToLocal} from "@internationalized/date";
 import {I18nProvider} from "@react-aria/i18n";
 

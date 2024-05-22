@@ -71,7 +71,7 @@ const SunIcon = `export const SunIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {Accordion, AccordionItem} from "@nextui-org/react";
+const App = `import {Accordion, AccordionItem} from "@simao234430/react";
 import {AnchorIcon} from './AnchorIcon';
 import {MoonIcon} from './MoonIcon';
 import {SunIcon} from './SunIcon';

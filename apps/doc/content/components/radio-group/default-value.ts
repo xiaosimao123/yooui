@@ -1,4 +1,4 @@
-const App = `import {RadioGroup, Radio} from "@nextui-org/react";
+const App = `import {RadioGroup, Radio} from "@simao234430/react";
 
 export default function App() {
   return (

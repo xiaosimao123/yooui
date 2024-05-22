@@ -1,4 +1,4 @@
-const App = `import {DatePicker} from "@nextui-org/react";
+const App = `import {DatePicker} from "@simao234430/react";
 
 export default function App() {
   const variants = ["flat", "bordered", "underlined", "faded"];

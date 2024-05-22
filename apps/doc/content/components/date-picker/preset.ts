@@ -1,4 +1,4 @@
-const App = `import {DatePicker, RadioGroup, Radio, ButtonGroup, Button, cn} from "@nextui-org/react";
+const App = `import {DatePicker, RadioGroup, Radio, ButtonGroup, Button, cn} from "@simao234430/react";
 import {startOfWeek, startOfMonth, getLocalTimeZone, today} from "@internationalized/date";
 import {useLocale, useDateFormatter} from "@react-aria/i18n";
 
@@ -91,7 +91,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {DatePicker, RadioGroup, Radio, ButtonGroup, Button, cn} from "@nextui-org/react";
+const AppTs = `import {DatePicker, RadioGroup, Radio, ButtonGroup, Button, cn} from "@simao234430/react";
 import {DateValue, startOfWeek, startOfMonth, getLocalTimeZone, today} from "@internationalized/date";
 import {useLocale, useDateFormatter} from "@react-aria/i18n";
 

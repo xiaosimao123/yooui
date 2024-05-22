@@ -1,4 +1,4 @@
-const App = `import {DatePicker} from "@nextui-org/react";
+const App = `import {DatePicker} from "@simao234430/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 
 export default function App() {

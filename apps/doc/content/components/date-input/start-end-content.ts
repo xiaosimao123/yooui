@@ -22,7 +22,7 @@ const CalendarIcon = `export const CalendarIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {DateInput} from "@nextui-org/react";
+const App = `import {DateInput} from "@simao234430/react";
 import {CalendarDate, parseDate} from "@internationalized/date";
 import {CalendarIcon} from './CalendarIcon';
 

@@ -1,8 +1,8 @@
-const App = `import {Code} from "@nextui-org/react";
+const App = `import {Code} from "@simao234430/react";
 
 export default function App() {
   return (
-    <Code>npm install @nextui-org/react</Code>
+    <Code>npm install @simao234430/react</Code>
   );
 }`;
 

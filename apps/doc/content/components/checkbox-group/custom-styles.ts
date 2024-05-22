@@ -1,4 +1,4 @@
-const CustomCheckbox = `import {Checkbox, Link, User, Chip, cn} from "@nextui-org/react";
+const CustomCheckbox = `import {Checkbox, Link, User, Chip, cn} from "@simao234430/react";
 
 export const CustomCheckbox = ({ user, statusColor, value }) => {
   return (
@@ -36,7 +36,7 @@ export const CustomCheckbox = ({ user, statusColor, value }) => {
   );
 };`;
 
-const App = `import {CheckboxGroup} from "@nextui-org/react";
+const App = `import {CheckboxGroup} from "@simao234430/react";
 import {CustomCheckbox} from "./CustomCheckbox";
 
 export default function App() {

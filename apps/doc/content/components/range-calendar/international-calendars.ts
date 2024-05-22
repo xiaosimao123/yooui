@@ -1,4 +1,4 @@
-const App = `import {RangeCalendar} from "@nextui-org/react";
+const App = `import {RangeCalendar} from "@simao234430/react";
 import {I18nProvider} from "@react-aria/i18n";
 
 export default function App() {

@@ -1,4 +1,4 @@
-const App = `import {RangeCalendar} from "@nextui-org/react";
+const App = `import {RangeCalendar} from "@simao234430/react";
 import {today, getLocalTimeZone} from "@internationalized/date";
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {RangeCalendar} from "@nextui-org/react";
+const AppTs = `import {RangeCalendar} from "@simao234430/react";
 import type {DateValue} from "@react-types/calendar";
 import type {RangeValue} from "@react-types/shared";
 import {today, getLocalTimeZone} from "@internationalized/date";

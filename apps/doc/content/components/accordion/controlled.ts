@@ -1,4 +1,4 @@
-const App = `import {Accordion, AccordionItem} from "@nextui-org/react";
+const App = `import {Accordion, AccordionItem} from "@simao234430/react";
 
 export default function App() {
   const [selectedKeys, setSelectedKeys] = React.useState(new Set(["1"]));
@@ -24,9 +24,9 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import type {Selection} from "@nextui-org/react";
+const AppTs = `import type {Selection} from "@simao234430/react";
 
-import {Accordion, AccordionItem} from "@nextui-org/react";
+import {Accordion, AccordionItem} from "@simao234430/react";
 
 export default function App() {
   const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));

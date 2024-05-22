@@ -1,4 +1,4 @@
-const App = `import {DateRangePicker, Radio, RadioGroup, Button, ButtonGroup, cn} from "@nextui-org/react";
+const App = `import {DateRangePicker, Radio, RadioGroup, Button, ButtonGroup, cn} from "@simao234430/react";
 import {today, startOfWeek, startOfMonth, endOfWeek, endOfMonth, useDateFormatter, getLocalTimeZone} from "@internationalized/date";
 import {useLocale} from "@react-aria/i18n";
 
@@ -114,7 +114,7 @@ export default function App() {
   );
 }`;
 
-// const AppTs = `import {DateRangePicker} from "@nextui-org/react";
+// const AppTs = `import {DateRangePicker} from "@simao234430/react";
 // import {now, today, startOfWeek, startOfMonth, useDateFormatter, getLocalTimeZone} from "@internationalized/date";
 // import {useLocale} from "@react-aria/i18n";
 // import {RangeValue} from "@react-types/shared";

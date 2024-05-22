@@ -1,4 +1,4 @@
-const App = `import {DatePicker} from "@nextui-org/react";
+const App = `import {DatePicker} from "@simao234430/react";
 import {parseDate, getLocalTimeZone} from "@internationalized/date";
 import {useDateFormatter} from "@react-aria/i18n";
 
@@ -20,7 +20,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {DatePicker} from "@nextui-org/react";
+const AppTs = `import {DatePicker} from "@simao234430/react";
 import {DateValue, parseDate, getLocalTimeZone} from "@internationalized/date";
 import {useDateFormatter} from "@react-aria/i18n";
 

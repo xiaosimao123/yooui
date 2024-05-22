@@ -1,15 +1,15 @@
 /* eslint-disable react/display-name */
 import {clsx} from "@simao234430/shared-utils";
 import * as Components from "@simao234430/react";
-// import {Language} from "prism-react-renderer";
-// import NextImage from "next/image";
+import {Language} from "prism-react-renderer";
+import NextImage from "next/image";
 
 import {ThemeSwitch} from "./theme-switch";
 
 import {Sandpack} from "@/components/sandpack";
 import {CarbonAd} from "@/components/ads/carbon-ad";
 import * as DocsComponents from "@/components/docs/components";
-// import * as BlogComponents from "@/components/blog/components";
+import * as BlogComponents from "@/components/blog/components";
 import {Codeblock} from "@/components/docs/components";
 import {VirtualAnchor, virtualAnchorEncode} from "@/components/virtual-anchor";
 import {trackEvent} from "@/utils/va";
@@ -184,7 +184,7 @@ export const MDXComponents = {
   /**
    * Next.js components
    */
-  // NextImage,
+  NextImage,
   /**
    * NextUI components
    */
@@ -195,13 +195,13 @@ export const MDXComponents = {
   ...DocsComponents,
   Sandpack,
   ThemeSwitch,
-  // /**
-  //  * Blog components
-  //  */
-  // ...BlogComponents,
-  // /**
-  //  * Markdown components
-  //  */
+  /**
+   * Blog components
+   */
+  ...BlogComponents,
+  /**
+   * Markdown components
+   */
   // ...Icons,
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <LinkedHeading as="h1" linked={false} {...props} />
@@ -223,14 +223,14 @@ export const MDXComponents = {
   blockquote: (props: Omit<React.HTMLAttributes<HTMLElement>, "color">) => (
     <DocsComponents.Blockquote {...props} />
   ),
-  // kbd: (props: React.HTMLAttributes<HTMLElement>) => (
-  //   <Components.Kbd {...props} className="py-0.5 px-1.5" />
-  // ),
-  // Steps: ({...props}) => (
-  //   <div
-  //     className="[&>h3]:step [&>h3>a]:pt-0.5 [&>h4]:step [&>h4>a]:pt-0.5 mb-12 ml-4 relative border-l border-default-100 pl-[1.625rem] [counter-reset:step]"
-  //     {...props}
-  //   />
-  // ),
+  kbd: (props: React.HTMLAttributes<HTMLElement>) => (
+    <Components.Kbd {...props} className="py-0.5 px-1.5" />
+  ),
+  Steps: ({...props}) => (
+    <div
+      className="[&>h3]:step [&>h3>a]:pt-0.5 [&>h4]:step [&>h4>a]:pt-0.5 mb-12 ml-4 relative border-l border-default-100 pl-[1.625rem] [counter-reset:step]"
+      {...props}
+    />
+  ),
   // Block,
 } as unknown as Record<string, React.ReactNode>;

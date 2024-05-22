@@ -1,4 +1,4 @@
-const App = `import {TimeInput} from "@nextui-org/react";
+const App = `import {TimeInput} from "@simao234430/react";
 import {parseAbsoluteToLocal, Time, ZonedDateTime} from "@internationalized/date";
 import {useDateFormatter} from "@react-aria/i18n";
 
@@ -25,7 +25,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {TimeInput} from "@nextui-org/react";
+const AppTs = `import {TimeInput} from "@simao234430/react";
 import type {TimeValue} from "@react-types/datepicker";
 import {parseAbsoluteToLocal, Time, ZonedDateTime} from "@internationalized/date";
 import {useDateFormatter} from "@react-aria/i18n";

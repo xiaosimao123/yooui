@@ -28,7 +28,7 @@ const ShoppingCartIcon = `export const ShoppingCartIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {Breadcrumbs, BreadcrumbItem} from "@nextui-org/react";
+const App = `import {Breadcrumbs, BreadcrumbItem} from "@simao234430/react";
 import {ShoppingCartIcon} from "./ShoppingCartIcon";
 
 export default function App() {

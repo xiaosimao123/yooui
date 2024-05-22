@@ -1,4 +1,4 @@
-const App = `import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+const App = `import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@simao234430/react";
 
 export default function App() {
   const [selectedKeys, setSelectedKeys] = React.useState(new Set(["text"]));

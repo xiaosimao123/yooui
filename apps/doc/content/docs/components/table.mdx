@@ -20,10 +20,10 @@ Tables are used to display tabular data using rows and columns. They allow users
 <PackageManagers
   commands={{
     cli: "nextui add table",
-    npm: "npm install @nextui-org/table",
-    yarn: "yarn add @nextui-org/table",
-    pnpm: "pnpm add @nextui-org/table",
-    bun: "bun add @nextui-org/table"
+    npm: "npm install @simao234430/table",
+    yarn: "yarn add @simao234430/table",
+    pnpm: "pnpm add @simao234430/table",
+    bun: "bun add @simao234430/table"
   }}
 />
 
@@ -48,7 +48,7 @@ NextUI exports 6 table-related components:
   TableColumn,
   TableRow,
   TableCell
-} from "@nextui-org/react";`,
+} from "@simao234430/react";`,
     individual: `import {
   Table,
   TableHeader,
@@ -56,7 +56,7 @@ NextUI exports 6 table-related components:
   TableColumn,
   TableRow,
   TableCell
-} from "@nextui-org/table";`,
+} from "@simao234430/table";`,
   }}
 />
 
@@ -82,7 +82,7 @@ You could also use `Array.map` to render the items, but it will not be as perfor
 Example:
 
 ```jsx
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue} from "@nextui-org/react";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue} from "@simao234430/react";
 
 const rows = [...];
 
@@ -285,7 +285,7 @@ It is also possible to use the [Pagination](/components/pagination) component to
 ### Infinite Pagination
 
 Table also supports infinite pagination. To do so, you can use the `useAsyncList` hook from [@react-stately/data](https://react-spectrum.adobe.com/react-stately/useAsyncList.html) and
-[@nextui-org/use-infinite-scroll](https://www.npmjs.com/package/@nextui-org/use-infinite-scroll) hook.
+[@simao234430/use-infinite-scroll](https://www.npmjs.com/package/@simao234430/use-infinite-scroll) hook.
 
 <CodeDemo
   asIframe

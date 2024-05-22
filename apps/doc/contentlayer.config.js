@@ -41,46 +41,46 @@ const AuthorProperties = defineNestedType(() => ({
   }
 }));
 
-// export const BlogPost = defineDocumentType(() => ({
-//   name: "BlogPost",
-//   filePathPattern: `blog/**/*.mdx`,
-//   contentType: "mdx",
-//   fields: {
-//     title: {type: "string", required: true},
-//     description: {type: "string", required: true},
-//     date: {type: "date", required: true},
-//     draft: {type: "boolean", required: false},
-//     tags: { type: 'list', of: { type: 'string' } },
-//     author: {type: "nested",of: AuthorProperties, required: false},
-//     image: {type: "string", required: false},
-//   },
-//   computedFields: {
-//     ...computedFields,
-//     // Date format June 22nd 2023
-//     formattedDate: {
-//       type: "string",
-//       resolve: (doc) => {
-//         const date = new Date(doc.date);
-//         const options = {year: "numeric", month: "long", day: "numeric"};
-//         return date.toLocaleDateString("en-US", options);
-//       }
-//     },
-//     // add https://YooUI.org to the image path
-//     imageAsParams: {
-//       type: "string",
-//       resolve: (doc) => {
-//         const image = doc.image;
-//         if (image) {
-//           return `https://YooUI.org${image}`;
-//         }
-//       }
-//     }
-//   }
-// }));
+export const BlogPost = defineDocumentType(() => ({
+  name: "BlogPost",
+  filePathPattern: `blog/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {type: "string", required: true},
+    description: {type: "string", required: true},
+    date: {type: "date", required: true},
+    draft: {type: "boolean", required: false},
+    tags: { type: 'list', of: { type: 'string' } },
+    author: {type: "nested",of: AuthorProperties, required: false},
+    image: {type: "string", required: false},
+  },
+  computedFields: {
+    ...computedFields,
+    // Date format June 22nd 2023
+    formattedDate: {
+      type: "string",
+      resolve: (doc) => {
+        const date = new Date(doc.date);
+        const options = {year: "numeric", month: "long", day: "numeric"};
+        return date.toLocaleDateString("en-US", options);
+      }
+    },
+    // add https://YooUI.org to the image path
+    imageAsParams: {
+      type: "string",
+      resolve: (doc) => {
+        const image = doc.image;
+        if (image) {
+          return `https://YooUI.org${image}`;
+        }
+      }
+    }
+  }
+}));
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Doc],
+  documentTypes: [Doc, BlogPost],
   mdx: {
     remarkPlugins: [remarkGfm, pluginCodeBlock],
     rehypePlugins: [

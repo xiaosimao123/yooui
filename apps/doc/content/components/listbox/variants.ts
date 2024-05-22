@@ -4,7 +4,7 @@ const ListboxWrapper = `export const ListboxWrapper = ({children}) => (
   </div>
 );`;
 
-const App = `import {Listbox, ListboxItem, RadioGroup, Radio} from "@nextui-org/react";
+const App = `import {Listbox, ListboxItem, RadioGroup, Radio} from "@simao234430/react";
 import {ListboxWrapper} from "./ListboxWrapper";
 
 export default function App() {

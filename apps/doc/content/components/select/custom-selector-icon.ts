@@ -47,7 +47,7 @@ const SelectorIcon = `export const SelectorIcon = (props) => (
     </svg>
 );`;
 
-const App = `import {Select, SelectItem} from "@nextui-org/react";
+const App = `import {Select, SelectItem} from "@simao234430/react";
 import {SelectorIcon} from "./SelectorIcon";
 import {animals} from "./data";
 

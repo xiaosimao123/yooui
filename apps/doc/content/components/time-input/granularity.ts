@@ -1,4 +1,4 @@
-const App = `import {TimeInput} from "@nextui-org/react";
+const App = `import {TimeInput} from "@simao234430/react";
 import {Time, parseAbsoluteToLocal} from "@internationalized/date";
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   );
 }`;
 
-const AppTs = `import {TimeInput} from "@nextui-org/react";
+const AppTs = `import {TimeInput} from "@simao234430/react";
 import type {TimeValue} from "@react-types/datepicker";
 import {Time, parseAbsoluteToLocal} from "@internationalized/date";
 

@@ -37,7 +37,7 @@ import {LargeLogo, SmallLogo, ThemeSwitch} from "@/components";
 import {TwitterIcon, GithubIcon, DiscordIcon, SearchLinearIcon} from "@/components/icons";
 import {useIsMounted} from "@/hooks/use-is-mounted";
 import {DocsSidebar} from "@/components/docs/sidebar";
-// import {useCmdkStore} from "@/components/cmdk";
+import {useCmdkStore} from "@/components/cmdk";
 import {FbRoadmapLink} from "@/components/featurebase/fb-roadmap-link";
 import {trackEvent} from "@/utils/va";
 
@@ -58,7 +58,7 @@ export const Navbar: FC<NavbarProps> = ({children, routes, mobileRoutes = [], sl
 
   const pathname = usePathname();
 
-  // const cmdkStore = useCmdkStore();
+  const cmdkStore = useCmdkStore();
 
   useEffect(() => {
     if (isMenuOpen) {

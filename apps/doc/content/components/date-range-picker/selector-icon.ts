@@ -14,7 +14,7 @@ const SelectorIcon = `export const SelectorIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {DateRangePicker} from "@nextui-org/react";
+const App = `import {DateRangePicker} from "@simao234430/react";
 import {SelectorIcon} from './SelectorIcon';
 export default function App() {
   return (

@@ -1,11 +1,11 @@
-const App = `import {Snippet} from "@nextui-org/react";
+const App = `import {Snippet} from "@simao234430/react";
 
 export default function App() {
   return (
     <Snippet>
-      <span>npm install @nextui-org/react</span>
-      <span>yarn add @nextui-org/react</span>
-      <span>pnpm add @nextui-org/react</span>
+      <span>npm install @simao234430/react</span>
+      <span>yarn add @simao234430/react</span>
+      <span>pnpm add @simao234430/react</span>
     </Snippet>
   );
 }`;

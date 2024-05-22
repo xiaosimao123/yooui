@@ -19,7 +19,7 @@ const AnchorIcon = `export const AnchorIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {Link} from "@nextui-org/react";
+const App = `import {Link} from "@simao234430/react";
 import {AnchorIcon} from "./AnchorIcon";
 
 export default function App() {

@@ -26,7 +26,7 @@ const SearchIcon = `export const SearchIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {Input} from "@nextui-org/react";
+const App = `import {Input} from "@simao234430/react";
 import {SearchIcon} from "./SearchIcon";
 
 export default function App() {

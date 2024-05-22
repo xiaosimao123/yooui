@@ -1,9 +1,9 @@
-const App = `import {Snippet} from "@nextui-org/react";
+const App = `import {Snippet} from "@simao234430/react";
 
 export default function App() {
   return (
     <Snippet hideCopyButton color="primary" variant="solid">
-      npm install @nextui-org/react
+      npm install @simao234430/react
     </Snippet>
   );
 }`;

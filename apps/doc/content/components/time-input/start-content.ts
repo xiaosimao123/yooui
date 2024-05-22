@@ -16,7 +16,7 @@ const ClockCircleLinearIcon = `export const ClockCircleLinearIcon = (props) => (
   </svg>
 );`;
 
-const App = `import {TimeInput} from "@nextui-org/react";
+const App = `import {TimeInput} from "@simao234430/react";
 import {ClockCircleLinearIcon} from './ClockCircleLinearIcon';
 import {Time} from "@internationalized/date";
 
