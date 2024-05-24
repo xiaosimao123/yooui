@@ -25,9 +25,9 @@ In your Remix project, run one of the following command to install NextUI:
 
 <PackageManagers
   commands={{
-    npm: 'npm i @nextui-org/react framer-motion',
-    yarn: 'yarn add @nextui-org/react framer-motion',
-    pnpm: 'pnpm add @nextui-org/react framer-motion',
+    npm: 'npm i @simao234430/react framer-motion',
+    yarn: 'yarn add @simao234430/react framer-motion',
+    pnpm: 'pnpm add @simao234430/react framer-motion',
   }}
 />
 
@@ -41,14 +41,14 @@ the following code to your `tailwind.config.js` file:
 
 ```ts {9,14-15}
 // tailwind.config.ts
-const { nextui } = require("@nextui-org/react");
+const { nextui } = require("@simao234430/react");
 
 import type { Config } from 'tailwindcss'
 
 export default {
   content: [
     // ...
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@simao234430/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},
@@ -60,9 +60,9 @@ export default {
 
 ### Provider Setup
 
-After installing NextUI, you need to set up the `NextUIProvider` at the `root` of your application.
+After installing NextUI, you need to set up the `YooUIProvider` at the `root` of your application.
 
-Go to the src directory and inside `root.tsx`, wrap `NextUIProvider` around App:
+Go to the src directory and inside `root.tsx`, wrap `YooUIProvider` around App:
 
 ```tsx {9,19,24}
 import {
@@ -73,7 +73,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import {NextUIProvider} from "@nextui-org/react";
+import {YooUIProvider} from "@simao234430/react";
 
 export default function App() {
   return (
@@ -83,12 +83,12 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <NextUIProvider>
+        <YooUIProvider>
           <Outlet />
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
-        </NextUIProvider>
+        </YooUIProvider>
       </body>
     </html>
   );
@@ -100,7 +100,7 @@ export default function App() {
 If you are using pnpm, you need to add the following code to your `.npmrc` file:
 
 ```bash
-public-hoist-pattern[]=*@nextui-org/*
+public-hoist-pattern[]=*@simao234430/*
 ```
 
 After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.

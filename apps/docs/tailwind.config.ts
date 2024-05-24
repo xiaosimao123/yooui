@@ -65,6 +65,7 @@ module.exports = {
         sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
         serif: defaultTheme.fontFamily.serif,
         mono: defaultTheme.fontFamily.mono,
+        // myfont:   ["var(--font-myfont)"  ]
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

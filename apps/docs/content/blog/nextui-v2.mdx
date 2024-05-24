@@ -240,17 +240,17 @@ by just adding the `dark` class to the `body` / `html` or `main` tag.
 // main.tsx or main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {NextUIProvider} from "@simao234430/react";
+import {YooUIProvider} from "@simao234430/react";
 import App from "./App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NextUIProvider>
+    <YooUIProvider>
       <main className="dark text-foreground bg-background">
         <App />
       </main>
-    </NextUIProvider>
+    </YooUIProvider>
   </React.StrictMode>,
 );
 ```

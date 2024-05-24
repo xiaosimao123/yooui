@@ -228,13 +228,13 @@ Here's and example using the `Indian` calendar system:
 
 <CodeDemo title="International Calendar" files={datePickerContent.internationalCalendar} />
 
-Alternatively you can set the `locale` globally by using the `NextUIProvider` component:
+Alternatively you can set the `locale` globally by using the `YooUIProvider` component:
 
 ```jsx
 // Next.js App Router example
 "use client";
 
-import {NextUIProvider} from "@simao234430/react";
+import {YooUIProvider} from "@simao234430/react";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -243,7 +243,7 @@ export interface ProvidersProps {
 export function Providers({children}: ProvidersProps) {
   const router = useRouter();
 
-  return <NextUIProvider locale="hi-IN-u-ca-indian">{children}</NextUIProvider>;
+  return <YooUIProvider locale="hi-IN-u-ca-indian">{children}</YooUIProvider>;
 }
 ```
 
@@ -251,14 +251,14 @@ If no `locale` is provided, it will extract the locale from the browser.
 
 ### NextUI Provider
 
-The `NextUIProvider` component was updated to include the `createCalendar` function, which allows you to create a calendar instance with the specified locale and time zone,
+The `YooUIProvider` component was updated to include the `createCalendar` function, which allows you to create a calendar instance with the specified locale and time zone,
 and the `defaultDates` object which allows you to set global minimum and maximum dates for the components.
 
 ```jsx
 // Next.js App Router example
 "use client";
 
-import {NextUIProvider, SupportedCalendars} from "@simao234430/react";
+import {YooUIProvider, SupportedCalendars} from "@simao234430/react";
 import {CalendarDate, GregorianCalendar} from "@internationalized/date";
 
 export interface ProvidersProps {
@@ -278,7 +278,7 @@ export function Providers({children}: ProvidersProps) {
   const router = useRouter();
 
   return (
-    <NextUIProvider
+    <YooUIProvider
       locale="hi-IN-u-ca-indian"
       defaultDates={{
         minDate: new CalendarDate(1900, 1, 1),
@@ -287,7 +287,7 @@ export function Providers({children}: ProvidersProps) {
       createCalendar={createCalendar}
     >
       {children}
-    </NextUIProvider>
+    </YooUIProvider>
   );
 }
 ```

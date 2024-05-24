@@ -81,7 +81,7 @@ interface Props<T extends DateValue> extends YooUIBaseProps<T> {
    *
    * This way, only GregorianCalendar is imported, and the other calendar implementations can be tree-shaken.
    *
-   * You can also use the NextUIProvider to provide the createCalendar function to all nested components.
+   * You can also use the YooUIProvider to provide the createCalendar function to all nested components.
    *
    * @default all calendars
    */

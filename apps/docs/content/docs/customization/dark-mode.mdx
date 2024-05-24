@@ -13,17 +13,17 @@ themes `light`and `dark`. So using the `dark` theme is as simple as adding it to
 // main.tsx or main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {NextUIProvider} from "@nextui-org/react";
+import {YooUIProvider} from "@simao234430/react";
 import App from "./App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NextUIProvider>
+    <YooUIProvider>
       <main className="dark text-foreground bg-background">
         <App />
       </main>
-    </NextUIProvider>
+    </YooUIProvider>
   </React.StrictMode>,
 );
 ```
@@ -64,23 +64,23 @@ Install `next-themes` in your project.
 Wrap your app with the `ThemeProvider` component from `next-themes`.
 
 Go to your `app/providers.tsx` or `app/providers.jsx` (create it if it doesn't exist) and wrap the 
-Component with the `NextUIProvider` and the `next-themes` provider components.
+Component with the `YooUIProvider` and the `next-themes` provider components.
 
 
 ```jsx
 // app/providers.tsx
 "use client";
 
-import {NextUIProvider} from '@nextui-org/react'
+import {YooUIProvider} from '@simao234430/react'
 import {ThemeProvider as NextThemesProvider} from "next-themes";
 
 export function Providers({children}: { children: React.ReactNode }) {
   return (
-    <NextUIProvider>
+    <YooUIProvider>
       <NextThemesProvider attribute="class" defaultTheme="dark">
         {children}
       </NextThemesProvider>
-    </NextUIProvider>
+    </YooUIProvider>
   )
 }
 ```
@@ -142,20 +142,20 @@ Install `next-themes` in your project.
 ### Add next-themes provider
 
 Go to pages`/_app.js` or `pages/_app.tsx` (create it if it doesn't exist) and  wrap the
-Component with the `NextUIProvider` and the `next-themes` provider components.
+Component with the `YooUIProvider` and the `next-themes` provider components.
 
 ```jsx
 // pages/_app.js
-import {NextUIProvider} from "@nextui-org/react";
+import {YooUIProvider} from "@simao234430/react";
 import {ThemeProvider as NextThemesProvider} from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <NextUIProvider>
+    <YooUIProvider>
       <NextThemesProvider attribute="class" defaultTheme="dark">
         <Component {...pageProps} />
       </NextThemesProvider>
-    </NextUIProvider>
+    </YooUIProvider>
   )
 }
 

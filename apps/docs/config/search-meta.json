@@ -10318,14 +10318,14 @@
     "hierarchy": { "lvl1": "Routing", "lvl2": "Introduction", "lvl3": null }
   },
   {
-    "content": "NextUIProvider Setup",
+    "content": "YooUIProvider Setup",
     "objectID": "c3cb7137-58df-4e4b-80d4-1c4c6b9e1560",
     "type": "lvl3",
-    "url": "/docs/guide/routing#nextuiprovider-setup",
+    "url": "/docs/guide/routing#YooUIProvider-setup",
     "hierarchy": {
       "lvl1": "Routing",
       "lvl2": "Introduction",
-      "lvl3": "NextUIProvider Setup"
+      "lvl3": "YooUIProvider Setup"
     }
   },
   {
@@ -10335,7 +10335,7 @@
     "url": "/docs/guide/routing#nextjs",
     "hierarchy": {
       "lvl1": "Routing",
-      "lvl2": "NextUIProvider Setup",
+      "lvl2": "YooUIProvider Setup",
       "lvl3": "Next.js"
     }
   },

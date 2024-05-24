@@ -12,12 +12,12 @@ import { Navbar } from "@/components/navbar";
 import {Cmdk} from "@/components/cmdk";
 import {ProBanner} from "@/components/pro-banner";
 // const inter = Inter({ subsets: ["latin"] });
-
-// import localFont from 'next/font/local'
-// export const InterFont = localFont({
-//   src: './inter.woff2',
-//   variable: '--font-Inter',
-// });
+import localFont from 'next/font/local'
+const myfont = localFont({
+  src: './Inter-VariableFont_slnt,wght.ttf',
+  variable: '--font-myfont',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -84,8 +84,8 @@ export default function RootLayout({
       </Providers>
       </div>
       </body> */}
-
-      <body className={clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+  <body className={clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable)}> 
+ 
         <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
           <div className="relative flex flex-col" id="app-container">
           <ProBanner />

@@ -1,4 +1,4 @@
-const App = `import {extendVariants, Button} from "@nextui-org/react";
+const App = `import {extendVariants, Button} from "@simao234430/react";
 
 const MyButton = extendVariants(Button, {
   variants: {

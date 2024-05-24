@@ -1,11 +1,11 @@
 import {parseToRgba, readableColor} from "color2k";
-import {Button, Tooltip} from "@simao234430/react";
+import {Button  , Tooltip, ListboxItem, Listbox} from "@simao234430/react";
 import {commonColors, semanticColors} from "@simao234430/theme";
 import {useClipboard} from "@simao234430/use-clipboard";
 import {useState} from "react";
 import {useTheme} from "next-themes";
 import {get, isEmpty} from "lodash";
-
+ 
 type ColorsItem = {
   color: string;
   scale?: string;
@@ -34,6 +34,76 @@ const scaleIndexMap: Record<number, string> = {
   7: "700",
   8: "800",
   9: "900",
+};
+
+const NewSwatch = ({color, scale,colorGroup}: { color: string; scale?: string;colorGroup?: string}) => {
+  const [copied, setCopied] = useState(false);
+  const {copy} = useClipboard();
+
+  const colorText = color
+    ? `#${parseToRgba(color)
+        .slice(0, 3)
+        .map((x) => x.toString(16).padStart(2, "0"))
+        .join("")
+        .toUpperCase()}`
+    : "N/A";
+
+  const handleCopy = () => {
+    copy(colorText);
+
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 1000);
+  };
+
+  return (
+    <Tooltip content="Copied" isOpen={copied}>
+      <Button
+   
+        className="flex flex-col  items-center justify-center w-96 h-12 rounded-none shadow-small"
+        style={{
+          backgroundColor: color,
+        }}
+        onPress={handleCopy}
+      >
+        {/* <span 
+          className="text-small font-semibold"
+          style={{
+            color: readableColor(color),
+          }}
+        >
+   {colorText}
+        </span> */}
+
+
+<div className="flex  justify-between ">
+  <div className=" ">       {scale && (
+          <span
+            className="text-tiny font-semibold"
+            style={{
+              color: readableColor(color),
+            }}
+          >
+            {colorGroup}-{scale}
+          </span>
+        )}</div>
+ 
+  <div className=" ">        <span
+          className="text-small font-semibold"
+          style={{
+            color: readableColor(color),
+          }}
+        >
+          {colorText}
+        </span></div>
+</div>
+
+ 
+      </Button>
+    </Tooltip>
+  );
 };
 
 const Swatch = ({color, scale}: {color: string; scale?: string}) => {
@@ -139,6 +209,74 @@ const SemanticSwatch = ({
   );
 };
 
+const SwatchCard = ({title,color, scale}: { title?: string;  color: string; scale?: string}) => {
+  const [copied, setCopied] = useState(false);
+  const {copy} = useClipboard();
+
+  const colorText = color
+    ? `#${parseToRgba(color)
+        .slice(0, 3)
+        .map((x) => x.toString(16).padStart(2, "0"))
+        .join("")
+        .toUpperCase()}`
+    : "N/A";
+
+  const handleCopy = (color: string) => {
+    copy(colorText);
+
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 1000);
+  };
+
+  return (
+    <Tooltip content="Copied" isOpen={copied}>
+        <Button   
+            key={scale}
+            className="rounded-none hover:scale-105 p-2.5 duration-200  flex justify-between w-full h-12 box-border cursor-pointer overflow-hidden "
+            style={{
+              backgroundColor: color,
+  
+              fontWeight: scale === '500' ? 'bold': 400,
+            }}
+            onPress={handleCopy}
+          >
+            <div className="rounded-l-md color-palette-item-left">
+              <div         style={{
+              color: readableColor(color),
+            }} className="color-name">{`${title}-${scale  }`}</div>
+              {/* <div className="color-contrast">
+                色彩对比度: {contrast} ({contrastLevel})
+              </div> */}
+            </div>
+            <span        style={{
+              color: readableColor(color),
+            }}  className="opacity-0 group-hover:opacity-100 rounded-r-md color-palette-value">{color}</span>
+          </Button>
+    </Tooltip>
+  );
+};
+
+const SwatchCardSet = ({colors, isSemantic = false}: SwatchSetProps) => (
+ 
+
+ 
+
+  <div className="  ">
+  {colors.map(({title, items}) => (
+   <div className="group  w-full mb-5" key={""}>
+    {title}
+    {items.map((c, index) =>
+           <SwatchCard key={`${c.color}-${index}`} title={title.toLowerCase()}  color={c.color} scale={c.scale} ></SwatchCard>
+         )}
+   </div>
+  ))}
+  </div>
+ 
+);
+
 const SwatchSet = ({colors, isSemantic = false}: SwatchSetProps) => (
   <div className="flex flex-row flex-wrap items-center justify-center">
     {colors.map(({title, items}) => (
@@ -168,6 +306,49 @@ const getCommonItems = (colors: string[]) => {
     color,
     scale: array.length > 2 ? scaleIndexMap[index] : undefined,
   }));
+};
+
+
+export const CommonColors1 = () => {
+  return (
+    <SwatchCardSet
+      colors={[
+ 
+        {
+          title: "Blue",
+          items: getCommonItems([...Object.values(commonColors.blue)]),
+        },
+        {
+          title: "Purple",
+          items: getCommonItems([...Object.values(commonColors.purple)]),
+        },
+        {
+          title: "Green",
+          items: getCommonItems([...Object.values(commonColors.green)]),
+        },
+        {
+          title: "Red",
+          items: getCommonItems([...Object.values(commonColors.red)]),
+        },
+        {
+          title: "Pink",
+          items: getCommonItems([...Object.values(commonColors.pink)]),
+        },
+        {
+          title: "Yellow",
+          items: getCommonItems([...Object.values(commonColors.yellow)]),
+        },
+        {
+          title: "Cyan",
+          items: getCommonItems([...Object.values(commonColors.cyan)]),
+        },
+        {
+          title: "Zinc",
+          items: getCommonItems([...Object.values(commonColors.zinc)]),
+        },
+      ]}
+    />
+  );
 };
 
 export const CommonColors = () => {

@@ -1,17 +1,17 @@
 export const rootFile = `
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { NextUIProvider } from "@simao234430/react";
+import { YooUIProvider } from "@simao234430/react";
 import App from "./App";
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NextUIProvider>
+    <YooUIProvider>
       <div className="w-screen h-screen p-8 flex items-start justify-center">
         <App />
       </div>  
-    </NextUIProvider>
+    </YooUIProvider>
   </React.StrictMode>
 );`;
 
